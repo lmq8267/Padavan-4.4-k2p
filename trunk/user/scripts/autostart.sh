@@ -52,7 +52,7 @@ logger -t "自动启动" "正在启动adbyby plus+"
 fi
 
 if [ $(nvram get aliddns_enable) = 1 ] ; then
-logger -t "自动启动" "正在启动阿里ddns"
+logger -t "自动启动" "正在启动lucky"
 /usr/bin/aliddns.sh start
 fi
 
@@ -77,7 +77,7 @@ logger -t "自动启动" "正在启动ddnsto"
 fi
 
 if [ $(nvram get aliyundrive_enable) = 1 ] ; then
-logger -t "自动启动" "正在启动阿里云盘"
+logger -t "自动启动" "正在启动alist"
 /usr/bin/aliyundrive-webdav.sh start
 fi
 
@@ -95,3 +95,9 @@ if [ $(nvram get frpc_enable) = 1 ] ; then
 logger -t "自动启动" "正在启动frp client"
 /usr/bin/frp.sh start
 fi
+
+if [ $(nvram get frps_enable) = 1 ] ; then
+logger -t "自动启动" "正在启动frp client"
+/usr/bin/frp.sh start
+fi
+
