@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title><#Web_Title#> - <#menu5_32#></title>
+<title><#Web_Title#> - ZeroTier</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="-1">
@@ -200,21 +200,21 @@ function showMRULESList(){
 				<div class="row-fluid">
 					<div class="span12">
 						<div class="box well grad_colour_dark_blue">
-							<h2 class="box_head round_top"><#menu5_30#> - <#menu5_32#></h2>
+							<h2 class="box_head round_top">ZeroTier - <#menu5_30#></h2>
 							<div class="round_bottom">
 							<div>
                             <ul class="nav nav-tabs" style="margin-bottom: 10px;">
 								<li id="allink" style="display:none">
-                                    <a href="Advanced_aliddns.asp"><#menu5_23_1#></a>
+                                    <a href="Advanced_aliddns.asp">Lucky</a>
                                 </li>
 								<li class="active">
-                                    <a href="Advanced_zerotier.asp"><#menu5_32_1#></a>
+                                    <a href="Advanced_zerotier.asp">ZeroTier</a>
                                 </li>
 				    				<li id="ddlink" style="display:none">
-                                    <a href="Advanced_ddnsto.asp"><#menu5_34_1#></a>
+                                    <a href="Advanced_ddnsto.asp">DDNSTO</a>
                                 </li>
 								<li id="wilink" style="display:none">
-                                    <a href="Advanced_wireguard.asp"><#menu5_35_1#></a>
+                                    <a href="Advanced_wireguard.asp">WireGuard</a>
                                 </li>
                             </ul>
                         </div>
