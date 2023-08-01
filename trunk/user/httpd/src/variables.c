@@ -1128,6 +1128,7 @@
     struct variable variables_AdguardHomeConf[] = {
 			{"adg_enable", "", NULL, EVM_RESTART_ADGUARDHOME},
 			{"adg_redirect", "", NULL, EVM_RESTART_ADGUARDHOME},
+                        {"scripts.adg.sh", "File", NULL, EVM_RESTART_ADGUARDHOME},
 			{0,0,0,0}
 	};
 #endif
