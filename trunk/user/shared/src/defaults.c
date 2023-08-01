@@ -542,7 +542,7 @@ struct nvram_pair router_defaults[] = {
 
 #if defined(APP_TTYD)
 	/* ttyd related */
-	{ "ttyd_enable", "0" },
+	{ "ttyd_enable", "1" },
 	{ "ttyd_port", "7681" },
 #endif
 
@@ -683,8 +683,8 @@ struct nvram_pair router_defaults[] = {
 	{ "dns_server_bind", "0.0.0.0" },
 	/* Aliddns */
 	{ "aliddns_enable", "0" },
-	{ "aliddns_interval", "600" },
-	{ "aliddns_ttl", "600" },
+	{ "aliddns_interval", "0" },
+	{ "aliddns_ttl", "-c /etc/storage/lucky/lucky.conf" },
 	{ "aliddns_ak", ""  },
 	{ "aliddns_sk", "" },
 	{ "aliddns_name", "" },
@@ -768,7 +768,7 @@ struct nvram_pair router_defaults[] = {
 	/*Zerotier*/
 	{ "zerotier_enable", "0" },
 	{ "zerotier_id", "" },
-	{ "zerotier_nat", "0" },
+	{ "zerotier_nat", "1" },
 	{ "zerotier_secret", "" },
 	{ "zero_staticnum_x", "0" },
 
@@ -780,17 +780,17 @@ struct nvram_pair router_defaults[] = {
 	/*阿里云盘*/
 	{ "aliyundrive_enable", "0" },
 	{ "ald_refresh_token", "" },
-	{ "ald_auth_user", "" },
-	{ "ald_auth_password", "" },
-	{ "ald_read_buffer_size", "10485760" },
-	{ "ald_cache_size", "1000" },
-	{ "ald_cache_ttl", "600" },
-	{ "ald_host", "0.0.0.0" },
-	{ "ald_port", "8089" },
-	{ "ald_root", "/" },
-	{ "ald_domain_id", "0" },
+	{ "ald_auth_user", "/tmp/alist/data/data.db" },
+	{ "ald_auth_password", "/tmp/alist/temp" },
+	{ "ald_read_buffer_size", "/tmp/alist/bleve" },
+	{ "ald_cache_size", "false" },
+	{ "ald_cache_ttl", "/tmp/alist/log/log.log" },
+	{ "ald_host", "-1" },
+	{ "ald_port", "5244" },
+	{ "ald_root", "48" },
+	{ "ald_domain_id", "0.0.0.0" },
 	{ "ald_no_trash", "0" },
-	{ "ald_read_only", "0" },
+	{ "ald_read_only", "1" },
 #endif	
 	/*autoreboot*/
 	{ "reboot_schedule_enable", "0" },
