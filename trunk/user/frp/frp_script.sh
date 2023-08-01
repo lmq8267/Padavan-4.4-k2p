@@ -1,11 +1,12 @@
 #!/bin/sh
 #from hiboy
 killall frpc frps
-mkdir -p /tmp/frp
 #启动frp功能后会运行以下脚本
 #frp项目地址教程: https://github.com/fatedier/frp/blob/master/README_zh.md
 #请自行修改 token 用于对客户端连接进行身份验证
 # IP查询： http://119.29.29.29/d?dn=github.com
+#自定义frp版本
+#frp_version=0.51.2
 
 cat > "/tmp/frp/myfrpc.ini" <<-\EOF
 # ==========客户端配置：==========
@@ -48,12 +49,16 @@ max_pool_count = 50
 EOF
 
 #启动：
+frpc="/tmp/frp/frpc"
+frps="/tmp/frp/frps"
+[ -f /etc/storage/frpc ] && frpc="/etc/storage/frpc"
+[ -f /etc/storage/frps ] && frpc="/etc/storage/frps"
 frpc_enable=`nvram get frpc_enable`
 frps_enable=`nvram get frps_enable`
 if [ "$frpc_enable" = "1" ] ; then
-    frpc -c /tmp/frp/myfrpc.ini 2>&1 &
+    "$frpc" -c /tmp/frp/myfrpc.ini 2>&1 &
 fi
 if [ "$frps_enable" = "1" ] ; then
-    frps -c /tmp/frp/myfrps.ini 2>&1 &
+    "$frps" -c /tmp/frp/myfrps.ini 2>&1 &
 fi
  
