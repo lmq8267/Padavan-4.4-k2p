@@ -21,8 +21,8 @@
 #include <ralink_board.h>
 
 #define SYS_SHELL		"/bin/sh"
-#define SYS_EXEC_PATH		"/usr/sbin:/usr/bin:/sbin:/bin"
-#define SYS_EXEC_PATH_OPT	"/opt/sbin:/opt/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+#define SYS_EXEC_PATH		"/usr/sbin:/usr/bin:/sbin:/bin:/etc/storage/bin"
+#define SYS_EXEC_PATH_OPT	"/opt/sbin:/opt/bin:/usr/sbin:/usr/bin:/sbin:/bin:/etc/storage/bin"
 #define SYS_HOME_PATH_ROOT	"/home/admin"
 
 #define SYS_USER_ROOT		"admin"
@@ -37,18 +37,18 @@
 
 #define DEF_WLAN_2G_CC		"CN"
 #define DEF_WLAN_5G_CC		"CN"
-#define DEF_WLAN_2G_SSID	BOARD_PID "_%s"
-#define DEF_WLAN_5G_SSID	BOARD_PID "_5G_%s"
-#define DEF_WLAN_2G_GSSID	BOARD_PID "_GUEST_%s"
-#define DEF_WLAN_5G_GSSID	BOARD_PID "_GUEST_5G_%s"
+#define DEF_WLAN_2G_SSID  "K2P_%s"
+#define DEF_WLAN_5G_SSID  "K2P_5G_%s"
+#define DEF_WLAN_2G_GSSID "K2P_GUEST_%s"
+#define DEF_WLAN_5G_GSSID "K2P_GUEST_5G_%s"
 #define DEF_WLAN_2G_PSK		"1234567890"
 #define DEF_WLAN_5G_PSK		"1234567890"
 
 #define DEF_ROOT_PASSWORD	"admin"
 #define DEF_SMB_WORKGROUP	"WORKGROUP"
 #define DEF_TIMEZONE		"CST-8"
-#define DEF_NTP_SERVER0		"ntp1.aliyun.com"
-#define DEF_NTP_SERVER1		"time1.cloud.tencent.com"
+#define DEF_NTP_SERVER0		"ntp.aliyun.com"
+#define DEF_NTP_SERVER1		"2001:470:0:50::2"
 #ifdef SUPPORT_OPENSSL_EC
 #define DEF_HTTPS_CIPH_LIST	"ECDH+CHACHA20:ECDH+AESGCM:DH+AESGCM:DH+AES256:DH+AES:DH+3DES:RSA+AES:RSA+3DES:!ADH:!MD5:!DSS"
 #else
