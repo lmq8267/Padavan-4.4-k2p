@@ -5,25 +5,15 @@ THISDIR = $(shell pwd)
 FLAGS := DEFS=""
 LDFLAGS := -static-libstdc++
 
-all: download_test extract_test
-	$(MAKE) -j$(HOST_NCPU) -C $(SRC_NAME)
+all: 
 
 download_test:
-	( if [ ! -f $(SRC_NAME).tar.gz ]; then \
-		wget -t5 --timeout=20 --no-check-certificate -O $(SRC_NAME).tar.gz $(SRC_URL); \
-	fi )
-
+	
 extract_test:
-	 if [ ! -d $(SRC_NAME) ] ; then \
-		tar xf $(SRC_NAME).tar.gz ; \
-		patch -d $(SRC_NAME) -p1 -i ../0007-add-cerrno-header-for-str-errno.patch ; \
-		patch -d $(SRC_NAME) -p1 -i ../0008-fix-compilation-for-arm_cortex-a7-neon.patch; \
-	 fi ;
+	 
 
 clean:
-	if [ -f $(SRC_NAME)/Makefile ] ; then \
-		$(MAKE) -C $(SRC_NAME) distclean ; \
-	fi ; \
+	
 
 romfs:
 	$(ROMFSINST) $(THISDIR)/zerotier.sh /usr/bin/zerotier.sh
