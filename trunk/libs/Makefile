@@ -13,7 +13,7 @@ UCLINUX_BUILD_LIB=1
 include $(PROJECT_CONFIG)
 include $(ARCH_CONFIG)
 
-CFLAGS  += -ffunction-sections -fdata-sections -fno-stack-protector
+CFLAGS  += -ffunction-sections -fdata-sections
 LDFLAGS += -Wl,--gc-sections
 
 DESTDIR=$(ROOTDIR)/stage
