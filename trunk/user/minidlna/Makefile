@@ -6,7 +6,7 @@ CFLAGS  += -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64
 THISDIR = $(shell pwd)
 
 all: download_test extract_test config_test
-	$(MAKE) -j$(HOST_NCPU) -C $(SRC_NAME)
+	$(MAKE) -j$(HOST_NCPU) -C -fno-stack-protector $(SRC_NAME)
 
 download_test:
 	( if [ ! -f $(SRC_NAME).tar.gz ]; then \
